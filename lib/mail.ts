@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer'
 import { Reservation } from './database'
 
 const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST || 'smtp.gmail.com',
+  host: process.env.EMAIL_HOST,
   port: Number(process.env.EMAIL_PORT || 465),
   secure: process.env.EMAIL_SECURE !== 'false',
   auth: {
