@@ -109,17 +109,17 @@ The backend uses local JSON storage and does not require a database connection s
 Create a file named `.env.local` at the project root and add your email and Twilio settings.
 
 ```env
-EMAIL_USER=simplifiedworks.official@gmail.com
-EMAIL_PASS=your-gmail-app-password
-EMAIL_FROM="Demo Café <simplifiedworks.official@gmail.com>"
-EMAIL_HOST=smtp.gmail.com
+EMAIL_USER=your-email@example.com
+EMAIL_PASS=your-app-password
+EMAIL_FROM=your-email@example.com
+EMAIL_HOST=your-smtp-host
 EMAIL_PORT=465
 EMAIL_SECURE=true
 
-TWILIO_ACCOUNT_SID=your-twilio-account-sid
-TWILIO_AUTH_TOKEN=your-twilio-auth-token
-TWILIO_PHONE_NUMBER=your-twilio-sms-number
-TWILIO_WHATSAPP_FROM=whatsapp:+your-twilio-whatsapp-number
+TWILIO_ACCOUNT_SID=your-account-sid
+TWILIO_AUTH_TOKEN=your-auth-token
+TWILIO_PHONE_NUMBER=your-phone-number
+TWILIO_WHATSAPP_FROM=your-whatsapp-number
 ```
 
 If you want a template, copy `.env.local.example` to `.env.local` and fill in the values.
