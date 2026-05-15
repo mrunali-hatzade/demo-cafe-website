@@ -1,0 +1,132 @@
+{
+  "reservations": [
+    {
+      "id": "6d1e7e92-06cb-48cc-b665-3411a4bf9427",
+      "status": "confirmed",
+      "createdAt": "2026-05-15T15:18:52.102Z",
+      "updatedAt": "2026-05-15T15:18:52.102Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalihatzade353@gmail.com",
+      "phone": "07218405826",
+      "date": "2026-05-29",
+      "time": "8:00 PM",
+      "guests": 2,
+      "specialRequests": ""
+    },
+    {
+      "id": "fc414db6-9f50-4ec2-b9ff-b638c99646ae",
+      "status": "confirmed",
+      "createdAt": "2026-05-15T15:01:01.576Z",
+      "updatedAt": "2026-05-15T15:01:01.576Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalithatzade20@gmail.com",
+      "phone": "07218405826",
+      "date": "2026-05-30",
+      "time": "7:00 PM",
+      "guests": 2,
+      "specialRequests": ""
+    },
+    {
+      "id": "c85ec04a-cbf8-4960-a709-5c4ca2603a2e",
+      "status": "confirmed",
+      "createdAt": "2026-05-15T13:57:42.583Z",
+      "updatedAt": "2026-05-15T13:57:42.583Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalithatzade20@gmail.com",
+      "phone": "07218405826",
+      "date": "2026-05-30",
+      "time": "3:00 PM",
+      "guests": 4,
+      "specialRequests": ""
+    },
+    {
+      "id": "faca6e11-2793-4595-9917-3366c260a128",
+      "status": "confirmed",
+      "createdAt": "2026-05-15T12:40:09.099Z",
+      "updatedAt": "2026-05-15T12:51:05.429Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalithatzade20@gmail.com",
+      "phone": "7218405826",
+      "date": "2026-05-23",
+      "time": "6:00 PM",
+      "guests": 2,
+      "specialRequests": ""
+    },
+    {
+      "id": "9222c1f8-787b-4254-8969-634e72cccd3f",
+      "status": "confirmed",
+      "createdAt": "2026-05-15T12:22:55.510Z",
+      "updatedAt": "2026-05-15T12:22:55.510Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalithatzade20@gmail.com",
+      "phone": "7218405826",
+      "date": "2026-05-30",
+      "time": "7:00 PM",
+      "guests": 2,
+      "specialRequests": ""
+    },
+    {
+      "id": "bbeb6948-b1d8-4129-b252-e3c4d4826f0d",
+      "status": "confirmed",
+      "createdAt": "2026-05-15T12:10:03.862Z",
+      "updatedAt": "2026-05-15T12:10:03.862Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalihatzade353@gmail.com",
+      "phone": "07218405826",
+      "date": "2026-06-03",
+      "time": "6:00 PM",
+      "guests": 2,
+      "specialRequests": "hello there!!"
+    },
+    {
+      "id": "ef5fb66f-90b7-4360-9e57-578c0d80cd8d",
+      "status": "confirmed",
+      "createdAt": "2026-05-15T11:50:15.077Z",
+      "updatedAt": "2026-05-15T11:50:15.077Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalihatzade353@gmail.com",
+      "phone": "07218405826",
+      "date": "2026-06-04",
+      "time": "6:00 PM",
+      "guests": 7,
+      "specialRequests": ""
+    },
+    {
+      "id": "26a5d659-802f-4153-897a-710de2366792",
+      "status": "confirmed",
+      "createdAt": "2026-05-15T11:46:12.621Z",
+      "updatedAt": "2026-05-15T11:46:12.621Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalithatzade20@gmail.com",
+      "phone": "7218405826",
+      "date": "2026-05-15",
+      "time": "7:00 PM",
+      "guests": 2,
+      "specialRequests": "birthaday decoraction\n"
+    },
+    {
+      "id": "b146d3d7-1780-424c-bcda-8354230d8caa",
+      "status": "confirmed",
+      "createdAt": "2026-05-15T11:45:09.897Z",
+      "updatedAt": "2026-05-15T11:45:09.897Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalihatzade353@gmail.com",
+      "phone": "07218405826",
+      "date": "2026-05-16",
+      "time": "8:00 PM",
+      "guests": 1,
+      "specialRequests": "hello there"
+    }
+  ],
+  "contactMessages": [
+    {
+      "id": "229c5177-617b-4830-97d8-fc9c10e5ebe3",
+      "isRead": false,
+      "createdAt": "2026-05-15T11:47:43.930Z",
+      "updatedAt": "2026-05-15T11:47:43.930Z",
+      "name": "Mrunali Hatzade",
+      "email": "mrunalihatzade353@gmail.com",
+      "message": "can u send me the exact location ?"
+    }
+  ]
+}

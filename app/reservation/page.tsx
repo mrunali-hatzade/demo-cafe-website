@@ -19,9 +19,37 @@ export default function ReservationPage() {
     specialRequests: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitted(true)
+    setIsSubmitting(true)
+    setError(null)
+
+    try {
+      const response = await fetch('/api/reservations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          guests: parseInt(formData.guests),
+        }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to create reservation')
+      }
+
+      setIsSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An unexpected error occurred')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -42,12 +70,20 @@ export default function ReservationPage() {
             <CheckCircle className="w-10 h-10 text-primary" />
           </div>
           <h1 className="font-serif text-3xl font-bold text-foreground mb-4">
-            Reservation Confirmed!
+            Reservation Confirmed
           </h1>
           <p className="text-muted-foreground mb-6">
-            Thank you, {formData.name}! Your table for {formData.guests} guests has been reserved for {formData.date} at {formData.time}. We&apos;ve sent a confirmation to {formData.email}.
+            Thank you, {formData.name}! Your table booking for {formData.guests} guests on {formData.date} at {formData.time} is confirmed.
           </p>
-          <div className="bg-card border border-border rounded-lg p-6 mb-8">
+          <div className="mb-6 rounded-2xl border border-primary/20 bg-primary/5 px-6 py-5">
+            <p className="text-sm font-medium text-primary-foreground">
+              A confirmation message has been sent from Demo Café.
+            </p>
+            <p className="text-sm text-muted-foreground mt-2">
+              You should receive an email at {formData.email} and a WhatsApp/SMS message on {formData.phone} if your credentials are configured.
+            </p>
+          </div>
+          <div className="bg-card border border-border rounded-lg p-6 mb-6">
             <h2 className="font-semibold text-foreground mb-4">Reservation Details</h2>
             <div className="space-y-3 text-left">
               <div className="flex justify-between">
@@ -148,6 +184,12 @@ export default function ReservationPage() {
               <h2 className="font-serif text-2xl font-bold text-foreground mb-6">
                 Booking Details
               </h2>
+
+              {error && (
+                <div className="mb-6 p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+                  <p className="text-destructive text-sm">{error}</p>
+                </div>
+              )}
 
               <div className="space-y-5">
                 <div>
@@ -256,12 +298,13 @@ export default function ReservationPage() {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg" 
+                <Button
+                  type="submit"
+                  size="lg"
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
+                  disabled={isSubmitting}
                 >
-                  Confirm Reservation
+                  {isSubmitting ? 'Creating Reservation...' : 'Confirm Reservation'}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
